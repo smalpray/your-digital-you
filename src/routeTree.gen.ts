@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AffiliationsRouteImport } from './routes/affiliations'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CertificationsRouteImport } from './routes/certifications'
+import { Route as CollabsRouteImport } from './routes/collabs'
+import { Route as ConsultingRouteImport } from './routes/consulting'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as GearRouteImport } from './routes/gear'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as RecommendationsRouteImport } from './routes/recommendations'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as StackRouteImport } from './routes/stack'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AffiliationsRoute = AffiliationsRouteImport.update({
+  id: '/affiliations',
+  path: '/affiliations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificationsRoute = CertificationsRouteImport.update({
+  id: '/certifications',
+  path: '/certifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CollabsRoute = CollabsRouteImport.update({
+  id: '/collabs',
+  path: '/collabs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultingRoute = ConsultingRouteImport.update({
+  id: '/consulting',
+  path: '/consulting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GearRoute = GearRouteImport.update({
+  id: '/gear',
+  path: '/gear',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecommendationsRoute = RecommendationsRouteImport.update({
+  id: '/recommendations',
+  path: '/recommendations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StackRoute = StackRouteImport.update({
+  id: '/stack',
+  path: '/stack',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/blog': typeof BlogRoute
+  '/certifications': typeof CertificationsRoute
+  '/collabs': typeof CollabsRoute
+  '/consulting': typeof ConsultingRoute
+  '/experience': typeof ExperienceRoute
+  '/gear': typeof GearRoute
+  '/projects': typeof ProjectsRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/resources': typeof ResourcesRoute
+  '/shop': typeof ShopRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/blog': typeof BlogRoute
+  '/certifications': typeof CertificationsRoute
+  '/collabs': typeof CollabsRoute
+  '/consulting': typeof ConsultingRoute
+  '/experience': typeof ExperienceRoute
+  '/gear': typeof GearRoute
+  '/projects': typeof ProjectsRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/resources': typeof ResourcesRoute
+  '/shop': typeof ShopRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/blog': typeof BlogRoute
+  '/certifications': typeof CertificationsRoute
+  '/collabs': typeof CollabsRoute
+  '/consulting': typeof ConsultingRoute
+  '/experience': typeof ExperienceRoute
+  '/gear': typeof GearRoute
+  '/projects': typeof ProjectsRoute
+  '/recommendations': typeof RecommendationsRoute
+  '/resources': typeof ResourcesRoute
+  '/shop': typeof ShopRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/affiliations'
+    | '/blog'
+    | '/certifications'
+    | '/collabs'
+    | '/consulting'
+    | '/experience'
+    | '/gear'
+    | '/projects'
+    | '/recommendations'
+    | '/resources'
+    | '/shop'
+    | '/stack'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/affiliations'
+    | '/blog'
+    | '/certifications'
+    | '/collabs'
+    | '/consulting'
+    | '/experience'
+    | '/gear'
+    | '/projects'
+    | '/recommendations'
+    | '/resources'
+    | '/shop'
+    | '/stack'
+  id:
+    | '__root__'
+    | '/'
+    | '/affiliations'
+    | '/blog'
+    | '/certifications'
+    | '/collabs'
+    | '/consulting'
+    | '/experience'
+    | '/gear'
+    | '/projects'
+    | '/recommendations'
+    | '/resources'
+    | '/shop'
+    | '/stack'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AffiliationsRoute: typeof AffiliationsRoute
+  BlogRoute: typeof BlogRoute
+  CertificationsRoute: typeof CertificationsRoute
+  CollabsRoute: typeof CollabsRoute
+  ConsultingRoute: typeof ConsultingRoute
+  ExperienceRoute: typeof ExperienceRoute
+  GearRoute: typeof GearRoute
+  ProjectsRoute: typeof ProjectsRoute
+  RecommendationsRoute: typeof RecommendationsRoute
+  ResourcesRoute: typeof ResourcesRoute
+  ShopRoute: typeof ShopRoute
+  StackRoute: typeof StackRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/affiliations': {
+      id: '/affiliations'
+      path: '/affiliations'
+      fullPath: '/affiliations'
+      preLoaderRoute: typeof AffiliationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certifications': {
+      id: '/certifications'
+      path: '/certifications'
+      fullPath: '/certifications'
+      preLoaderRoute: typeof CertificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/collabs': {
+      id: '/collabs'
+      path: '/collabs'
+      fullPath: '/collabs'
+      preLoaderRoute: typeof CollabsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consulting': {
+      id: '/consulting'
+      path: '/consulting'
+      fullPath: '/consulting'
+      preLoaderRoute: typeof ConsultingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gear': {
+      id: '/gear'
+      path: '/gear'
+      fullPath: '/gear'
+      preLoaderRoute: typeof GearRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recommendations': {
+      id: '/recommendations'
+      path: '/recommendations'
+      fullPath: '/recommendations'
+      preLoaderRoute: typeof RecommendationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stack': {
+      id: '/stack'
+      path: '/stack'
+      fullPath: '/stack'
+      preLoaderRoute: typeof StackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AffiliationsRoute: AffiliationsRoute,
+  BlogRoute: BlogRoute,
+  CertificationsRoute: CertificationsRoute,
+  CollabsRoute: CollabsRoute,
+  ConsultingRoute: ConsultingRoute,
+  ExperienceRoute: ExperienceRoute,
+  GearRoute: GearRoute,
+  ProjectsRoute: ProjectsRoute,
+  RecommendationsRoute: RecommendationsRoute,
+  ResourcesRoute: ResourcesRoute,
+  ShopRoute: ShopRoute,
+  StackRoute: StackRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
