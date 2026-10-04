@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, ArrowRight, Link } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight, ArrowRight, Boxes, Triangle, Play } from "lucide-react";
 import profileAsset from "@/assets/profile.png.asset.json";
 
 export const Route = createFileRoute("/")({

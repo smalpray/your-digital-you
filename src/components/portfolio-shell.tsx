@@ -166,6 +166,28 @@ function Sidebar() {
   );
 }
 
+export function PageHeader({
+  index,
+  title,
+  blurb,
+}: {
+  index: string;
+  title: string;
+  blurb: string;
+}) {
+  return (
+    <section>
+      <h2 className="text-sm text-muted-foreground">{index}</h2>
+      <h1 className="mt-8 text-3xl font-bold tracking-tight md:text-4xl">
+        {title}
+      </h1>
+      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted-foreground">
+        {blurb}
+      </p>
+    </section>
+  );
+}
+
 export function PortfolioShell() {
   return (
     <div className="min-h-screen bg-background font-mono text-foreground">
