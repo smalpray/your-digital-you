@@ -36,10 +36,11 @@
   --color-ring: var(--ring);
   --color-surface: var(--surface);
   --font-mono: var(--font-mono);
+  --font-pixel: "Geist Pixel", ui-monospace, monospace;
 }
 
 :root {
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   --radius: 0.5rem;
   --background: oklch(0.16 0.004 260);
   --foreground: oklch(0.93 0.003 95);

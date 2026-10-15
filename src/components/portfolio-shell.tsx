@@ -1,25 +1,11 @@
 import { Outlet, Link, useRouterState } from "@tanstack/react-router";
-import {
-  ShoppingBag,
-  PenLine,
-  Laptop,
-  Library,
-  MessageSquare,
-  Sun,
-  Moon,
-  Volume2,
-} from "lucide-react";
+import { House, UserRound, Laptop, Library, MessageSquare, Sun, Moon, Volume2 } from "lucide-react";
 
 const navMain = [
-  { label: "Shop", icon: ShoppingBag, to: "/shop" },
-  { label: "Blog", icon: PenLine, to: "/blog" },
+  { label: "Home", icon: House, to: "/" },
+  { label: "About me", icon: UserRound, to: "/about" },
   { label: "Gear", icon: Laptop, to: "/gear" },
   { label: "Resources", icon: Library, to: "/resources" },
-];
-
-const navSecondary = [
-  { label: "Collabs", to: "/collabs" },
-  { label: "Consulting", to: "/consulting" },
 ];
 
 const navProjects = [
@@ -36,9 +22,7 @@ function Sidebar() {
   const isActive = (to: string) => pathname === to;
   const linkClass = (to: string) =>
     `flex items-center gap-2.5 rounded-md px-1 py-1.5 text-[13px] transition-colors ${
-      isActive(to)
-        ? "text-muted-foreground"
-        : "text-foreground hover:text-muted-foreground"
+      isActive(to) ? "text-muted-foreground" : "text-foreground hover:text-muted-foreground"
     }`;
 
   return (
@@ -56,17 +40,6 @@ function Sidebar() {
           {navMain.map(({ label, icon: Icon, to }) => (
             <Link key={to} to={to} className={linkClass(to)}>
               <Icon className="size-3.5 text-muted-foreground" />
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="my-4 h-px bg-sidebar-border" />
-
-        <nav className="flex flex-col gap-1">
-          {navSecondary.map(({ label, to }) => (
-            <Link key={to} to={to} className={linkClass(to)}>
-              <span className="text-[10px] text-muted-foreground">⌥</span>
               {label}
             </Link>
           ))}
@@ -178,12 +151,8 @@ export function PageHeader({
   return (
     <section>
       <h2 className="text-sm text-muted-foreground">{index}</h2>
-      <h1 className="mt-8 text-3xl font-bold tracking-tight md:text-4xl">
-        {title}
-      </h1>
-      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted-foreground">
-        {blurb}
-      </p>
+      <h1 className="mt-8 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
+      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-muted-foreground">{blurb}</p>
     </section>
   );
 }
@@ -198,10 +167,7 @@ export function PortfolioShell() {
         <Link to="/" className="text-sm font-bold">
           Wacky Hojilla
         </Link>
-        <a
-          href="mailto:hello@wackyhojilla.com"
-          className="text-xs text-muted-foreground"
-        >
+        <a href="mailto:hello@wackyhojilla.com" className="text-xs text-muted-foreground">
           hello@wackyhojilla.com
         </a>
       </header>
